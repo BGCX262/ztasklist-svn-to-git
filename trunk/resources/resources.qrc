@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/priority">
+        <file alias="high">priority/high.png</file>
+        <file alias="low">priority/low.png</file>
+        <file alias="normal">priority/normal.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="application-exit">icons/application-exit.png</file>
+        <file alias="list-add">icons/list-add.png</file>
+        <file alias="preferences-system">icons/preferences-system.png</file>
+        <file alias="task-complete">icons/task-complete.png</file>
+        <file alias="document-open">icons/document-open.png</file>
+        <file alias="all-tasks">icons/all-tasks.png</file>
+        <file alias="clear">icons/edit-clear.png</file>
+        <file alias="import">icons/document-import.png</file>
+        <file alias="export">icons/document-export.png</file>
+        <file alias="sync">icons/reload.png</file>
+        <file alias="remove">icons/list-remove.png</file>
+        <file alias="private">icons/private.png</file>
+        <file alias="about">icons/help-about.png</file>
+        <file alias="icon">icons/icon.png</file>
+        <file alias="filter">icons/view-filter.png</file>
+        <file alias="edit-clear">icons/edit-clear-locationbar-rtl.png</file>
+        <file alias="backup">icons/backup.png</file>
+        <file alias="clock">icons/clock.png</file>
+        <file alias="book">icons/book.png</file>
+        <file alias="note">icons/note.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>notify.mp3</file>
+    </qresource>
+    <qresource prefix="/markup">
+        <file alias="bold">markup/format-text-bold.png</file>
+        <file alias="italic">markup/format-text-italic.png</file>
+        <file alias="underline">markup/format-text-underline.png</file>
+        <file alias="color">markup/format-text-color.png</file>
+    </qresource>
+</RCC>

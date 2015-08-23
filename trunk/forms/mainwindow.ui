@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ZTaskList</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tasks</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="0" colspan="3">
+         <widget class="TaskListWidget" name="taskListWidget"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QGroupBox" name="editTaskBox">
+          <property name="title">
+           <string>Edit task</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0" colspan="2">
+            <widget class="TaskEditWidget" name="taskEditWidget" native="true">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="saveTaskButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="cancelTaskButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Cancel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="4">
+         <widget class="QWidget" name="taskFilterWidget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="ClearLineEdit" name="taskFilterEdit"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="taskFilterBox">
+             <item>
+              <property name="text">
+               <string>Show all</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Only public</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Only private</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="completeBox">
+             <property name="text">
+              <string>Hide completed</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Notes</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QWidget" name="noteFilterWidget" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="ClearLineEdit" name="noteFilterEdit"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="noteFilterBox">
+             <item>
+              <property name="text">
+               <string>Show all</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Only public</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Only private</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="2">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="title">
+           <string>Edit note</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0" colspan="2">
+            <widget class="NoteEditWidget" name="noteEditWidget" native="true"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="saveNoteButton">
+             <property name="text">
+              <string>Save</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="cancelNoteButton">
+             <property name="text">
+              <string>Cancel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="NoteListWidget" name="noteListWidget"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="taskBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_task"/>
+   <addaction name="actionRemove_task"/>
+   <addaction name="actionRemove_completed"/>
+   <addaction name="actionToggle_completion"/>
+   <addaction name="actionToggleTask_privacy"/>
+  </widget>
+  <widget class="QToolBar" name="noteBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionNew_note"/>
+   <addaction name="actionRemove_note"/>
+   <addaction name="actionToggleNote_privacy"/>
+  </widget>
+  <action name="actionNew_task">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/list-add</normaloff>:/icons/list-add</iconset>
+   </property>
+   <property name="text">
+    <string>New task</string>
+   </property>
+   <property name="toolTip">
+    <string>Add new task</string>
+   </property>
+  </action>
+  <action name="actionRemove_task">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+   </property>
+   <property name="text">
+    <string>Remove task</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove selected task</string>
+   </property>
+  </action>
+  <action name="actionRemove_completed">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/clear</normaloff>:/icons/clear</iconset>
+   </property>
+   <property name="text">
+    <string>Remove completed</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove all completed tasks</string>
+   </property>
+  </action>
+  <action name="actionToggle_completion">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/task-complete</normaloff>:/icons/task-complete</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle completion</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle comletion of current task</string>
+   </property>
+  </action>
+  <action name="actionToggleTask_privacy">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/private</normaloff>:/icons/private</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle privacy</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle privacy of current task</string>
+   </property>
+  </action>
+  <action name="actionNew_note">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/list-add</normaloff>:/icons/list-add</iconset>
+   </property>
+   <property name="text">
+    <string>New note</string>
+   </property>
+   <property name="toolTip">
+    <string>Add new note</string>
+   </property>
+  </action>
+  <action name="actionRemove_note">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+   </property>
+   <property name="text">
+    <string>Remove note</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove current note</string>
+   </property>
+  </action>
+  <action name="actionToggleNote_privacy">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/icons/private</normaloff>:/icons/private</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle privacy</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle note privacy</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClearLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../clearlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TaskListWidget</class>
+   <extends>QListView</extends>
+   <header location="global">../tasklistwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TaskEditWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">../taskeditwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NoteEditWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">../noteeditwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NoteListWidget</class>
+   <extends>QTreeView</extends>
+   <header location="global">../notelistwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

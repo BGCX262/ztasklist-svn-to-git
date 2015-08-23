@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=ZTaskList
+Comment=Simple task list with sinchronization
+Comment[ru]=Простой список дел
+Exec=ztasklist
+Icon=ztasklist
+Terminal=false
+Type=Application
+StartupNotify=false
+Categories=Application;Utility;
